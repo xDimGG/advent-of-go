@@ -16,8 +16,8 @@ func main() {
 	finalMatchCount := 0
 	var finalA, finalB []byte
 
-	for _, a := range ids {
-		for _, b := range ids {
+	for i, a := range ids {
+		for _, b := range ids[i:] {
 			if bytes.Equal(a, b) {
 				continue
 			}
