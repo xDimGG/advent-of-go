@@ -13,11 +13,11 @@ func main() {
 		panic(err)
 	}
 
-	values := bufio.NewScanner(input)
+	scanner := bufio.NewScanner(input)
 	acc := 0
 
-	for values.Scan() {
-		i, err := strconv.Atoi(values.Text())
+	for scanner.Scan() {
+		i, err := strconv.Atoi(scanner.Text())
 		if err != nil {
 			panic(err)
 		}
