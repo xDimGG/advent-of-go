@@ -20,7 +20,7 @@ func main() {
 		copy(inputCopy, input)
 
 		for i := 0; i < len(inputCopy)-1; i++ {
-			if int(inputCopy[i]) == c+65 || int(inputCopy[i]) == c+97 {
+			if int(inputCopy[i]) == c+'A' || int(inputCopy[i]) == c+'a' {
 				inputCopy = append(inputCopy[:i], inputCopy[i+1:]...)
 			} else if isOppCase(inputCopy[i], inputCopy[i+1]) {
 				inputCopy = append(inputCopy[:i], inputCopy[i+2:]...)
@@ -49,7 +49,7 @@ func main() {
 }
 
 func isOppCase(a, b byte) bool {
-	if a >= 65 && a <= 90 {
+	if a >= 'A' && a <= 'Z' {
 		return a+32 == b
 	}
 

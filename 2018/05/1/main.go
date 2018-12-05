@@ -25,7 +25,7 @@ func main() {
 }
 
 func isOppCase(a, b byte) bool {
-	if a >= 65 && a <= 90 {
+	if a >= 'A' && a <= 'Z' {
 		return a+32 == b
 	}
 
